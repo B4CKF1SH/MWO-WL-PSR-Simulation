@@ -55,6 +55,10 @@ public class Main {
                 for (Player p : t1) {
                     p.changePSR(t1Win * PSR_CHANGE);
                 }
+                
+                for (Player p : t2) {
+                    p.changePSR(-t1Win * PSR_CHANGE);
+                }
             }
 
             List<Player> sorted = players.stream().sorted(Comparator.comparingInt(Player::getPSR)).collect(Collectors.toList());
